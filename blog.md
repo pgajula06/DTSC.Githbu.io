@@ -15,7 +15,11 @@ A real-world example of an ethically ambiguous model could be a predictive polic
 ### Third Blog
 #### Social Determinants of Health and the Capabilities Approach
 Social determinants of health are conditions that a person is put into that weigh on the health of an individual, these conditions are ones that people do not always have a choice in, some examples of these are what type of neighborhood a person lives in. If it is safe or not, if they have access to water, electricity, good schools/education system, if they have access to health care or clinics, weather pollution is prevalent or if it is a food desert. Health is shaped by all of these, not just the physical body of someone when they go to the doctor for a check up. 
+
 The capabilities approach is something that focuses on what people can actually do, it is an approach more based on if a person has the freedoms/opportunity to live the life they want. For example, if two people have the same amount of money to spend, however, one lives in a neighborhood with an abundance of healthy grocery stores, lots of public transportation and a great social community. Then another person has to face discrimination, lives in unsafe places, and does not have access to proper grocery stores, these two people have two very different opportunities.
-While these two topics are very different they are connected with the common goal of providing individuals with a better quality of life. One needs to be fixed to the other can be fixed if a person's social determinants are poor, such as their housing, quality of education, or access to health care. When those lack their capabilities, they can’t do much if they are not provided with good resources. SOme good measurable variables to use to see the connection between these two are income levels, housing quality, and environmental hazards 
+
+While these two topics are very different they are connected with the common goal of providing individuals with a better quality of life. One needs to be fixed to the other can be fixed if a person's social determinants are poor, such as their housing, quality of education, or access to health care. When those lack their capabilities, they can’t do much if they are not provided with good resources. Some good measurable variables to use to see the connection between these two are income levels, housing quality, and environmental hazards 
+##### visualizations for blog three
+
 
 
