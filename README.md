@@ -1,5 +1,5 @@
 # DTSC Portfolio 
-[About me](about me) | [Portfolio](Portfolio) | [Blog](Blog)
+[About me](about me) | [Portfolio](portfolio) | [Blog](blog)
 
 
 ---
