@@ -20,7 +20,8 @@ The capabilities approach is something that focuses on what people can actually 
 
 While these two topics are very different they are connected with the common goal of providing individuals with a better quality of life. One needs to be fixed to the other can be fixed if a person's social determinants are poor, such as their housing, quality of education, or access to health care. When those lack their capabilities, they can’t do much if they are not provided with good resources. Some good measurable variables to use to see the connection between these two are income levels, housing quality, and environmental hazards 
 ##### visualizations for blog three
-[Scanned Feb 20, 2026 at 7_52_44 AM.pdf](https://github.com/user-attachments/files/25443624/Scanned.Feb.20.2026.at.7_52_44.AM.pdf)
+[Uploading Scanned Feb 20, 2026 at 7_52_44 AM.pdf…]()
+
 
 
 
