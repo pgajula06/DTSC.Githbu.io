@@ -1,1 +1,119 @@
+# %%
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# %%
+df = pd.read_csv("cleaned_data-2.csv")
+
+# %% [markdown]
+# # inspecting data set
+
+# %%
+df.head()
+
+# %%
+df.head(51)
+
+# %%
+df.shape
+
+# %%
+df.describe()
+
+# %%
+df.head()
+
+# %% [markdown]
+# ### deleting columns that aren't needed to the question
+
+# %%
+# drop all columns containing 'think_time' in their name
+cols = [c for c in df.columns if 'think_time' in c]
+df.drop(columns=cols, inplace=True)
+df.head()
+
+# %%
+df.drop(columns=["smartphone_discomfort"], inplace=True)
+
+# %%
+df.drop(columns=["profession", "refreshed_after_social_media", "anxious_stressed", "compare_with_others"], inplace=True, errors='ignore')
+df.head(50)
+
+# %% [markdown]
+# ### Make a visualization to understand the data correlation
+
+# %%
+sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
+plt.title("Correlation Heatmap")
+
+# %% [markdown]
+# ##### seeing how deleting rows of zeros changes the data
+
+# %%
+ 
+df = df[(df != 0).all(axis=1)]
+df.head()
+
+# %%
+### making a scatter plot to visualize the relationship between 'social_media_usage' and 'stress_level'
+sns.scatterplot(data=df, x='time_loss_social_media', y='nervous_anxious')
+plt.title('Scatter Plot of Social Media Usage vs Stress Level')
+plt.xlabel('Social Media Usage (hours per day)')
+
+
+# %%
+sns.scatterplot(
+    data=df,
+    x="social_media_before_bed",
+    y="mood_disorder",
+    size="time_loss_social_media",
+    legend=False,
+    sizes=(20, 200)
+)
+plt.title("Social Media Before Bed vs Mood Disorder")
+plt.xlabel("Social Media Before Bed")
+plt.ylabel("Mood Disorder")
+plt.show()
+
+# %%
+ordered_levels_df = df['social_media_before_bed'].value_counts().index
+g_df = sns.FacetGrid(df, row='social_media_before_bed', row_order=ordered_levels_df, height=1.7, aspect=4)
+g_df.map(sns.kdeplot, 'time_loss_social_media')
+plt.xlabel('Time Loss Social Media')
+plt.show()
+
+# %%
+# FacetGrids of mood_disorder by actual time spent on each app
+actual_apps = [c for c in df.columns if c.startswith("actual_time_")]
+
+for col in actual_apps:
+    ordered_levels = sorted(df[col].dropna().unique())
+    g = sns.FacetGrid(df, row=col, row_order=ordered_levels, height=1.6, aspect=4)
+    g.map(sns.kdeplot, "mood_disorder", fill=True)
+    g.set_xlabels("Mood Disorder")
+    g.fig.suptitle(f"Mood Disorder by {col.replace('actual_time_','').capitalize()} usage", y=1.02)
+    plt.show()
+
+# %%
+# create a single FacetGrid for all apps showing KDEs of mood_disorder by usage level
+from sqlalchemy import func
+
+
+melted = df.melt(id_vars=['mood_disorder'], value_vars=actual_apps, var_name='app', value_name='usage')
+melted['app'] = melted['app'].str.replace('actual_time_', '').str.capitalize()
+melted['usage'] = melted['usage'].astype(str)
+
+row_order = [c.replace('actual_time_', '').capitalize() for c in actual_apps]
+
+g = sns.FacetGrid(melted, row='app', row_order=row_order, hue='usage', height=1.6, aspect=4, palette='tab10')
+g.map(sns.kdeplot, 'mood_disorder', common_norm=False, fill=True, alpha=0.6)
+g.set_xlabels('Mood Disorder')
+g.add_legend(title='Usage')
+g.fig.suptitle('Mood Disorder by App Usage', y=1.02)
+warn_singular=False
+
+plt.show()
+
+# %%
 
