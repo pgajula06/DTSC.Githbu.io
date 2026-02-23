@@ -46,6 +46,7 @@ Some bias could be the self sampling bias which could be different that the samp
 - youtube.com for tutorials on how to make specific graphs and what to see examples of people cleaning data sets
 - copilot to help fix bugs in my code or fix syntax errors
 
-
+  
+-------
 
 ## Project 2
