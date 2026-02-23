@@ -1,6 +1,6 @@
 # Projects
 
-## [Project 1](project.1.2.ipynb)
+## [Project 1](project.1.2.ipynb) click to see code work
 #### Written portion 
 How does the time young adults spend on social media affect their mental health
 I think this question is relevant because with the current use of social media like instagream, twitter and tik tok. The mental health repercussions are still not fully understood. I know multiple people that log into their phones and become jealous of the lives people show on social media or learn about news that makes them increasingly sad. So to understand this I want to use this data set to see the correlation between social media use and mood disorders
