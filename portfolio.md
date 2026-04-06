@@ -48,7 +48,7 @@ Some bias could be the self sampling bias which could be different that the samp
 -------
 
 # Project 2
-## [Project 2](project 2.ipynb) Click to see code
+## [Project 2]() Click to see code
 ## Written Portion
 --------
 
