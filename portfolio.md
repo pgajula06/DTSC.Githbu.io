@@ -91,6 +91,8 @@ This shows the essential data preprocessing phase by cleaning and preparing your
 
 Finally pair plots
 <img width="2211" height="2211" alt="output first" src="https://github.com/user-attachments/assets/784fd919-f47d-4644-bd6e-aed251dcd67d" />
+
+
 <img width="2211" height="2211" alt="output" src="https://github.com/user-attachments/assets/05556495-ddd6-40a3-8edc-f172697af809" />
 
 The primary difference between these two pictures is how they handle the relationship between a fire's area and its perimeter. The linear Reaction Model(Top) assumes a fixed, straight line relationship, which results in a rigid "best fit" that struggles to account for unique, jagged shapes of large wildfires. In contrast the Decision tree model(Bottom) uses a flexible, non-linear approach that can better adapt to complex  branching behavior of fire boundaries, leading to tighter clusters of predictions. While both models show uncertainty as the fire grows in size the Decision tree pair plots ability to categorize different fire types allow for a more nuanced and accurate estimation of invisible edges.
