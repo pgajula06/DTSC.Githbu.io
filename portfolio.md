@@ -52,25 +52,30 @@ Some bias could be the self sampling bias which could be different that the samp
 ### Written Portion
 --------
 
-### Predicitng the reach of Wildfires
-Every summer, across the forests of the United States, a familia and frightening sight appears, the rising wildfires thorugh out the contries start. For emergency responders, the most critical question isn't just "where is the fire?" but rather how big will it get, and how can we get it under control the fastest.
-In my project I try to take this question by invesitgating wheater we can use fire's core size(Area) to accurately perdict its boundaries(Perimeter). Hopefully being able to give valuable insight on where to dig firebreaks and which communties to evacuate. 
+### Predicting the reach of Wildfires
+Every summer, across the forests of the United States, a familiar and frightening sight appears, the rising wildfires throughout the country start. For emergency responders, the most critical question isn't just "where is the fire?" but rather how big will it get, and how can we get it under control the fastest.
+In my project I try to answer this question by investigating whether we can use fire's core size(Area) to accurately predict its boundaries(Perimeter). Hopefully being able to give valuable insight on where to dig firebreaks and which communities to evacuate. 
 
-#### The problem: Uperdicatable Flames
-A wildfire isn't a perfect circle. It is shaped by the wind, terrain, and fuel given to it. While we often hear about the acerage of a fire, the perimeter is actually where the most important part of the fire takes place, it helps first repsonders know where to be to stop the furthur spread by removing vegitation or spray chemical agents. 
-My reasearch question was simple, can a machine learning model look at the footprint of past fires and perdict the length of its edge(the active burning perimeter)? If succuessful, this could give first responders a fater way to estimate the resources needed to contain a blaze
 
-#### Invesitagting Data
-Using the enviormental data the I got from Data.gov on wildfries from a federal source I analyzed fire events, however with all the noisy data some cleaning needed to be done first. I had a couple of challenges with this data set one being how there was a lot of repetition through out the whole data set. I discovered inculding all the data from the data set was causing multicollinerity meaning it essentailly stopped understanding the data and rather just doing unit conversions. On top of that I removed ghost data point such as negaitve perimeters of lengths, and ducplicate info to ensure that focues was put on the physics of the fire.
+#### The problem: Unpredictable Flames
+A wildfire isn't a perfect circle. It is shaped by the wind, terrain, and fuel given to it. While we often hear about the acreage of a fire, the perimeter is actually where the most important part of the fire takes place, it helps first responders know where to be to stop the further spread by removing vegetation or spray chemical agents. 
+My research question was simple: can a machine learning model look at the footprint of past fires and predict the length of its edge(the active burning perimeter)? If successful, this could give first responders a faster way to estimate the resources needed to contain a blaze
+
+
+#### Investigating Data
+Using the environmental data that I got from Data.gov on wildfires from a federal source I analyzed fire events, however with all the noisy data some cleaning needed to be done first. I had a couple of challenges with this data set one being how there was a lot of repetition throughout the whole data set. I discovered including all the data from the data set was causing multicollinearity meaning it essentially stopped understanding the data and rather just doing unit conversions. On top of that I removed ghost data points such as negative perimeters of lengths, and duplicate info to ensure that focus was put on the physics of the fire.
+
 
 #### Why one tool isn't enough
-I tested three different types of models to perdict the fires edge:
-1. Linear Regression: Great standard, predictable fires but stuggles with complex. I used this model to be a base control group. If the perditionc could come out accuarte with a simple stright line than no need for more complex meassures but that was not the case. I also assumed with would be the best with my data becasue bigger fire equals biggere peimeters and bigger damage.
-2. Regularized Models(Ridge and lasso): These acted as a filter, ignoring the less important data to focus on the strognest predictors. My data set had mulitcollinearity and these Ridge and Lasso add a penalty for complexity, forcing the mdoel to only focus on the most importnat variables. This prevents the model from "cheating" by using two different area measurements to memorize specific fire, forcing it to find a general rule thatapplies to all fires.
-3. Decision Trees: These were ablt to handle the non-linear nature of wildfires recognizing that a small fire in a windy canyon behaves differently then a samll fire on a flate plain. This model can catogorize fires into different types and apply different logic to each. Helping further all the models to push a better outcome.
+I tested three different types of models to predict the fires edge:
+1. Linear Regression: Great standard, predictable fires but struggles with complexity. I used this model to be a base control group. If the prediction could come out accurate with a simple straight line then no need for more complex measures but that was not the case. I also assumed with would be the best with my data because bigger fire equals bigger perimeters and bigger damage.
+2. Regularized Models(Ridge and lasso): These acted as a filter, ignoring the less important data to focus on the strongest predictors. My data set had multicollinearity and these Ridge and Lasso add a penalty for complexity, forcing the model to only focus on the most important variables. This prevents the model from "cheating" by using two different area measurements to memorize specific fires, forcing it to find a general rule that applies to all fires.
+3. Decision Trees: These were able to handle the non-linear nature of wildfires recognizing that a small fire in a windy canyon behaves differently than a small fire on a flat plain. This model can categorize fires into different types and apply different logic to each. Helping further all the models to push a better outcome.
+
 
 #### The Impact
-The most eye opening moment of this research/data invesitagation came when I realized that my model was most vulnerable when the fire was the most irregular. For a perfect circular fire, the prediction was easy. However, for jadded fires ones that has multiple factors impacting it, the ones hardest to contain, the models errors skyroceted and it shows how much more work this model needs.
+The most eye opening moment of this research/data investigation came when I realized that my model was most vulnerable when the fire was the most irregular. For a perfect circular fire, the prediction was easy. However, for jaded fires, ones that have multiple factors impacting it, the ones hardest to contain, the model's errors skyrocketed and it shows how much more work this model needs.
+
 
 #### References 
 - Professors Dr. Blekking and Dr.Bennedict on their help and advise on which data sets to use
