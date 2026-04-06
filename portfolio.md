@@ -73,12 +73,27 @@ I tested three different types of models to predict the fires edge:
 3. Decision Trees: These were able to handle the non-linear nature of wildfires recognizing that a small fire in a windy canyon behaves differently than a small fire on a flat plain. This model can categorize fires into different types and apply different logic to each. Helping further all the models to push a better outcome.
 
 #### Visualizations
-I know just talking about subjects can get confusing and boring, I wanted to share some images from the reasearch that I think would build a better picture to truly understand correlation.
+I know just talking about subjects can get confusing and boring, I wanted to share some images from the research that I think would build a better picture to truly understand correlation.
+
+These are heat maps
 <img width="916" height="741" alt="Screenshot 2026-04-05 224405" src="https://github.com/user-attachments/assets/6cc1237d-d4e5-44f1-9778-a16786479ce0" />
-This image is one the first images I made to vizualize the correlation between all the vairbles and this is the heat map that I ended with after all my cleaning
+
+This image is one the first images I made to visualize the correlation between all the variables and this is the heat map that I ended with after all my cleaning
+
 <img width="983" height="850" alt="Screenshot 2026-04-05 224349" src="https://github.com/user-attachments/assets/8908c48e-7ac1-484b-a06c-8c410f99c61a" />
 
+In short I calculated the R^2 and an RMSE with these pictures. It was successfully telling us that we can estimate a fire boundary, but it also showed that shape complexity was my model's biggest challenge. For large fires we would still need human double check
 
+This is a Tree model!
+<img width="1733" height="965" alt="Screenshot 2026-04-05 224336" src="https://github.com/user-attachments/assets/650741cb-deaf-4a84-9bd7-6fb697e79ff7" />
+
+This shows the essential data preprocessing phase by cleaning and preparing your wildfire dataset for machine learning. First, it identifies and removes multicollinearity by dropping redundant columns, ensuring the model doesn't get lazy by training on duplicate area metrics. Next it handles missing values through imputation, filling in gaps so the algorithms have a complete dataset to analyze. It filters out outliers and invalid data. Finally the code organizes the remaining features into a clean format that is ready for any model.
+
+Finally pair plots
+<img width="2211" height="2211" alt="output first" src="https://github.com/user-attachments/assets/784fd919-f47d-4644-bd6e-aed251dcd67d" />
+<img width="2211" height="2211" alt="output" src="https://github.com/user-attachments/assets/05556495-ddd6-40a3-8edc-f172697af809" />
+
+The primary difference between these two pictures is how they handle the relationship between a fire's area and its perimeter. The linear Reaction Model(Top) assumes a fixed, straight line relationship, which results in a rigid "best fit" that struggles to account for unique, jagged shapes of large wildfires. In contrast the Decision tree model(Bottom) uses a flexible, non-linear approach that can better adapt to complex  branching behavior of fire boundaries, leading to tighter clusters of predictions. While both models show uncertainty as the fire grows in size the Decision tree pair plots ability to categorize different fire types allow for a more nuanced and accurate estimation of invisible edges.
 
 
 
