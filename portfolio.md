@@ -1,4 +1,4 @@
-# Projects | [Project 1]([Project 1]) | [Project 2]([Project 2])
+# Projects 1 and 2
 
 ## [Project 1](project.1.2.ipynb) click to see code work
 #### Written portion 
