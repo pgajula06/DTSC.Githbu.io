@@ -72,6 +72,9 @@ I tested three different types of models to predict the fires edge:
 2. Regularized Models(Ridge and lasso): These acted as a filter, ignoring the less important data to focus on the strongest predictors. My data set had multicollinearity and these Ridge and Lasso add a penalty for complexity, forcing the model to only focus on the most important variables. This prevents the model from "cheating" by using two different area measurements to memorize specific fires, forcing it to find a general rule that applies to all fires.
 3. Decision Trees: These were able to handle the non-linear nature of wildfires recognizing that a small fire in a windy canyon behaves differently than a small fire on a flat plain. This model can categorize fires into different types and apply different logic to each. Helping further all the models to push a better outcome.
 
+#### Visualizations
+I know just talking about subjects can get confusing and boring, I wanted to share some images from the reasearch that I think would build a better picture to truly understand correlation 
+
 
 #### The Impact
 The most eye opening moment of this research/data investigation came when I realized that my model was most vulnerable when the fire was the most irregular. For a perfect circular fire, the prediction was easy. However, for jaded fires, ones that have multiple factors impacting it, the ones hardest to contain, the model's errors skyrocketed and it shows how much more work this model needs.
