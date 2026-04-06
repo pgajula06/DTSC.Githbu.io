@@ -48,8 +48,8 @@ Some bias could be the self sampling bias which could be different that the samp
 -------
 
 # Project 2
-## [Project2]() Click to see code
-### Written Portion
+## [Project 2]() Click to see code
+## Written Portion
 --------
 
 ### Predicting the reach of Wildfires
