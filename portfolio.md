@@ -73,7 +73,13 @@ I tested three different types of models to predict the fires edge:
 3. Decision Trees: These were able to handle the non-linear nature of wildfires recognizing that a small fire in a windy canyon behaves differently than a small fire on a flat plain. This model can categorize fires into different types and apply different logic to each. Helping further all the models to push a better outcome.
 
 #### Visualizations
-I know just talking about subjects can get confusing and boring, I wanted to share some images from the reasearch that I think would build a better picture to truly understand correlation 
+I know just talking about subjects can get confusing and boring, I wanted to share some images from the reasearch that I think would build a better picture to truly understand correlation.
+<img width="916" height="741" alt="Screenshot 2026-04-05 224405" src="https://github.com/user-attachments/assets/6cc1237d-d4e5-44f1-9778-a16786479ce0" />
+This image is one the first images I made to vizualize the correlation between all the vairbles and this is the heat map that I ended with after all my cleaning
+<img width="983" height="850" alt="Screenshot 2026-04-05 224349" src="https://github.com/user-attachments/assets/8908c48e-7ac1-484b-a06c-8c410f99c61a" />
+
+
+
 
 
 #### The Impact
