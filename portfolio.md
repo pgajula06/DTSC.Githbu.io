@@ -1,4 +1,4 @@
-# Projects 1 and 2
+# Projects 1, 2 and Final Project
 
 ## [Project 1](project.1.2.ipynb) click to see code work
 #### Written portion 
@@ -112,3 +112,8 @@ The most eye opening moment of this research/data investigation came when I real
 - youtube.com for tutorials on how to make specific graphs and what to see examples of people cleaning data sets
 - Google.com the search up questions about fires and understand each variable given
 - copilot to help fix bugs in my code or fix syntax errors
+
+-------
+# Fianl Project
+## [Final Project]() Click to see code
+## Written Portion
