@@ -114,7 +114,7 @@ The most eye opening moment of this research/data investigation came when I real
 
 -------
 # Fianl Project
-## [Final Project]() Click to see code
+## [Final Project](final_project(1).ipynb) Click to see code
 ## Written Portion
 #### Introduction 
 Crude oil is one of the most critical resources in the global economy, influencing transportation, energy production, and overall economic stability. Because oil is traded globally, even small changes in supply, demand, or geopolitical conditions can significantly impact prices and availability. 
