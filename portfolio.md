@@ -174,6 +174,8 @@ Decision Tree Regressor
 	A decision tree model was trained with limited depth to prevent overfitting. However, the 
 model showed very weak predictive performance with R² score score close to zero. 
 Random Forest Regressor
+<img width="1761" height="885" alt="Screenshot 2026-05-03 174056" src="https://github.com/user-attachments/assets/efb6a7c4-d38e-4428-9346-e54d1172fdce" />
+
 A more advanced ensemble model was applied to improve predictive performance. While it performed slightly better than the decision tree, the R² score remained low, indicating limited explanatory power from the available features.
 Logistic Regression
 	To further test predictability, oil prices were converted into a binary classification 
@@ -192,6 +194,8 @@ Logistic Regression accuracy ≈ 50% (equivalent to random chance)
 Correlation analysis between import quantity and oil prices showed near zero relationships, confirming that no strong linear connection exists between the variables. 
 
 These results suggest that oil prices are influenced more by macroeconomic and global market factors than by direct import volumes or supply chain structure. 
+<img width="1781" height="722" alt="Screenshot 2026-05-03 174146" src="https://github.com/user-attachments/assets/1be83b82-4714-470d-ae19-ebbb61e7286d" />
+
 
 #### Key insights
 The U.S. relies heavily on a few key import partners, especially Canada.
@@ -207,6 +211,8 @@ Instead, oil prices are shaped by broader global forces such as geopolitical eve
 In contests, imports reflect physical supply chains, while prices reflect global financial market behavior. These two systems operate in parallel but are not strongly dependent on each other in a predictive sense. 
 
 Overall, this analysis highlights the complexity of global energy systems and the limitations of using supply side data alone to forecast market price. 
+<img width="1503" height="732" alt="Screenshot 2026-05-03 174045" src="https://github.com/user-attachments/assets/be36363d-34e6-410d-921c-6dd8682b23ca" />
+
 
 #### Resources
 U.S. Energy Information Administration (EIA). Crude Oil Imports Data API. https://www.eia.gov/
