@@ -52,7 +52,6 @@ Some bias could be the self sampling bias which could be different that the samp
 # Project 2
 ## [Project 2](project.2.2.ipynb) Click to see code
 ## Written Portion
---------
 
 ### Predicting the reach of Wildfires
 Every summer, across the forests of the United States, a familiar and frightening sight appears, the rising wildfires throughout the country start. For emergency responders, the most critical question isn't just "where is the fire?" but rather how big will it get, and how can we get it under control the fastest.
@@ -117,3 +116,106 @@ The most eye opening moment of this research/data investigation came when I real
 # Fianl Project
 ## [Final Project]() Click to see code
 ## Written Portion
+#### Introduction 
+Crude oil is one of the most critical resources in the global economy, influencing transportation, energy production, and overall economic stability. Because oil is traded globally, even small changes in supply, demand, or geopolitical conditions can significantly impact prices and availability. 
+
+This project investigates the relationship between U.S. crude oil imports and global oil prices. Specifically, it explores whether import patterns such as where oil comes from, how much is imported, and what type of crude is received have meaningful connection to changes in spot prices for WTI and Brent crude oil.
+
+Understanding this relationship is important because oil prices directly affect consumers through gas prices, inflation, and energy costs. While imports reflect the stability and structure of global supply chains. 	
+
+#### Data
+This project combines two real world datasets from the U.S. Energy Information Administration (EIA) and related energy market sources. 
+
+1) U.S. Crude Oil Imports (EIA API Dataset)
+This dataset contains monthly records of crude oil imports into the United States, 
+Including:
+originName: Country of origin (e.g Canada, Mexico, Saudi Arabia)
+destinationName: Refinery or port destination
+gradeName: Type of crude oil 
+quantity: Volume of crude oil imported 
+period: Monthly time period of imports
+	This dataset helps explain how oil physically enters the U.S. supply chain. 
+
+2) Crude oil Spot Prices Dataset 
+This dataset contains historical data spot prices for:
+WTI Crude Oil
+Brent Crude Oil
+It includes daily price values in U.S. dollars per barrel over time, capturing fluctuations 
+caused by global supply and demand changes, geopolitical events, and market speculation.
+
+#### Preprocessing and Exploratory Data Analysis
+The dataset was cleaned and prepared for analysis by standardizing formats, handling missing values, and converting date fields into consistent time based formats to allow merging.
+
+The imports dataset was grouped and analyzed by country of origin to identify major suppliers. The results showed that Canada, Non OPEC countries, and Middle Eastern nations were among the largest contributors to U.S. crude oil imports.
+The spot price database was filtered to focus only on crude oil related values and converted into a time series format. Initial exploratory analysis showed clear vitality in both WTI and Brent consistently trading at a higher value. 
+
+Additional exploratory analysis included:
+Scatterplots comparing import quantities across origins and crude grades
+This displays the relationship between import quantity, origin, and crude oil grade across the top origins in the dataset. The distribution of points highlights variations in quantity by region and grade type, helping identify trends, clusters, and potential outliers in import activity.
+Time series visualizations of oil price fluctuations
+This shows changes in WTI Crude Oil and UK Brent Crude Oil spot prices over time. The visualization highlights price trends, fluctuations, and major spikes or drops in the market across different years.
+Heatmaps showing distribution patterns across time and categories
+This shows the correlation between variables in the merged imports and spot prices dataset. The colors represent the strength of relationships between variables, with most values showing weak correlations. This suggests that the variables are largely independent and do not strongly influence one another.
+These visualizations helped reveal that oil imports are relatively stable compared to volatile price movements. 
+
+#### Modeling
+To investigate whether crude oil imports could help explain or predict oil prices, multiple machine learning models were applied to the merged dataset.
+
+The dataset included features such as: 
+Import quantity
+Origin country 
+Crude oil grade
+Destination type
+
+The target variable was the spot price (WTI and Brent values).
+
+Three modeling approaches were used: 
+Decision Tree Regressor 
+	A decision tree model was trained with limited depth to prevent overfitting. However, the 
+model showed very weak predictive performance with R² score score close to zero. 
+Random Forest Regressor
+A more advanced ensemble model was applied to improve predictive performance. While it performed slightly better than the decision tree, the R² score remained low, indicating limited explanatory power from the available features.
+Logistic Regression
+	To further test predictability, oil prices were converted into a binary classification 
+problem. Logistic regression was used, but the model performed close to random 
+guessing, indicating weak signal strength in the input features. 
+
+	Cross validation was also applied, and results consistently showed low predictive 
+performance across all models. 
+
+#### Results
+The key finding from this project is that crude oil import characteristics do not strongly predict or explain crude oil spot prices.
+Decision Tree R² ≈ 0.01 (very weak performance)
+Random Forest R² ≈ 0.12 (slightly improved but still weak)
+Logistic Regression accuracy ≈ 50% (equivalent to random chance)
+
+Correlation analysis between import quantity and oil prices showed near zero relationships, confirming that no strong linear connection exists between the variables. 
+
+These results suggest that oil prices are influenced more by macroeconomic and global market factors than by direct import volumes or supply chain structure. 
+
+#### Key insights
+The U.S. relies heavily on a few key import partners, especially Canada.
+Brent crude consistently trades at higher prices than WTI. 
+Oil imports remain relatively stable over time compared to volatile price movements. 
+Import patterns alone are not sufficient to predict oil prices. 
+
+#### Conclusion
+This project demonstrates that while crude oil imports are essential for maintaining U.S. energy supply, they do not directly determine oil prices. 
+
+Instead, oil prices are shaped by broader global forces such as geopolitical events, production decisions by major oil producing countries, and shifts in global demand. 
+
+In contests, imports reflect physical supply chains, while prices reflect global financial market behavior. These two systems operate in parallel but are not strongly dependent on each other in a predictive sense. 
+
+Overall, this analysis highlights the complexity of global energy systems and the limitations of using supply side data alone to forecast market price. 
+
+#### Resources
+U.S. Energy Information Administration (EIA). Crude Oil Imports Data API. https://www.eia.gov/
+
+
+U.S. Energy Information Administration (EIA). Petroleum & Other Liquids Data. Available at: https://www.eia.gov/petroleum/data.php
+
+AI Acknowledgement: ChatFPT was used to assist in data cleaning. 
+U.S. Energy Information Administration (EIA)
+
+S. Petroleum & Other Liquids Spot Price Data
+
